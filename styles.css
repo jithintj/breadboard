@@ -122,8 +122,8 @@ h2 {
 /* Back to Top Link */
 .back-to-top {
     position: fixed;
-    bottom: 60px;  /* Adjust this value to position it above the footer */
-    left: 20px;    /* Position it on the left side */
+    bottom: 20px;
+    right: 20px;
     padding: 0.5rem 1rem;
     background-color: #3498db;
     color: white;
@@ -132,7 +132,6 @@ h2 {
     font-weight: bold;
     transition: background-color 0.3s;
     z-index: 1000;
-    display: none; /* Initially hidden */
 }
 
 .back-to-top:hover {
