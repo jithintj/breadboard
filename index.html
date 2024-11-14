@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -19,7 +19,6 @@
     </header>
 
     <main>
-
         <section id="about">
             <h2>Jithin TJ</h2>
             <p>"Enjoys sharing knowledge in electronics and embedded systems through practical oriented tutorials. I work on platforms like Arduino, PIC, AVR, Raspberry Pi and support projects involving CAD, 3D printing, PCB design, and hardware simulation. My goal is to help others learn through hands-on experience, making complex concepts more approachable. Whether you're new to electronics or looking to expand your skills, I'm here to help."</p>
@@ -67,11 +66,9 @@
                     <h3>Arduino - Advanced</h3>
                     <p>Learn how to use Interrupts and Timers, EEPROM, Communication Protocols.</p>
                 </article>              
-                <!-- More tutorial cards can be added here -->
             </div>
         </section>
 
-        
         <section id="CAD tutorials">
             <h2>CAD Tutorials</h2>
             <div class="tutorial-grid">
@@ -92,16 +89,37 @@
                     <p>Learn advanced modeling, assemblies, mates and collaborative tools.</p>
                 </article>
 
-                <!-- More tutorial cards can be added here -->
             </div>
         </section>
 
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me:</p>
+            <ul>
+                <li><strong>Phone/WhatsApp:</strong> +91 735 629 9816</li>
+                <li><strong>Email:</strong> jithintj555@gmail.com</li>
+            </ul>
+        </section>
+        
+        <!-- The Back to Top button should scroll to the top -->
         <a href="#home" class="back-to-top">Back to Top</a>
-
     </main>
 
     <footer>
         <p>&copy; 2024 Breadboard Tutorials. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript to show/hide the Back to Top button
+        window.onscroll = function() {
+            var backToTopButton = document.querySelector('.back-to-top');
+            // Check if the user has scrolled down 300px from the top of the document
+            if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+                backToTopButton.style.display = "block"; // Show the button
+            } else {
+                backToTopButton.style.display = "none"; // Hide the button
+            }
+        };
+    </script>
 </body>
 </html>
