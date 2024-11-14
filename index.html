@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial Website</title>
+    <title>Breadboard Tutorials</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,26 +19,89 @@
     </header>
 
     <main>
-        <section id="home">
-            <h1>Welcome to My Tutorial Site</h1>
-            <p>Learn and explore with our comprehensive tutorials.</p>
+
+        <section id="about">
+            <h2>Jithin TJ</h2>
+            <p>"I'm a person who enjoys sharing knowledge in electronics and embedded systems through practical oriented tutorials. I work on platforms like Arduino, PIC, AVR, Raspberry Pi and support projects involving CAD, 3D printing, PCB design, and hardware simulation. My goal is to help others learn through hands-on experience, making complex concepts more approachable. Whether you're new to electronics or looking to expand your skills, I'm here to help."</p>
         </section>
 
         <section id="tutorials">
-            <h2>Latest Tutorials</h2>
+            <h2>Electronics Tutorials</h2>
             <div class="tutorial-grid">
                 <article class="tutorial-card">
-                    <img src="images/placeholder.png" alt="Tutorial 1">
-                    <h3>Tutorial Title 1</h3>
-                    <p>Brief description of the tutorial goes here.</p>
+                    <div class="img-container">
+                        <img src="images/basic.png" alt="Introduction to Electronics Tutorial Image">
+                    </div>
+                    <h3>Introduction to Electronics</h3>
+                    <p>Discover the basics of electronics in this introductory guide.</p>
                 </article>
+
+                <article class="tutorial-card">
+                    <div class="img-container">
+                        <img src="images/arduino_1.png" alt="Arduino - Beginner Tutorial Image">
+                    </div>
+                    <h3>Arduino - Beginner</h3>
+                    <p>Introduction to Arduino board for absolute beginners.</p>
+                </article>
+
+                <article class="tutorial-card">
+                    <div class="img-container">
+                        <img src="images/arduino_2.png" alt="Arduino - Sensors & LCD Tutorial Image">
+                    </div>
+                    <h3>Arduino - Sensors & LCD</h3>
+                    <p>Using Arduino to read various sensors & display data using LCD module.</p>
+                </article>
+
+                <article class="tutorial-card">
+                    <div class="img-container">
+                        <img src="images/arduino_3.png" alt="Arduino - Actuators Tutorial Image">
+                    </div>
+                    <h3>Arduino - Actuators</h3>
+                    <p>Using Arduino for controlling DC motor, Stepper Motor, Servo Motor etc.</p>
+                </article>
+
+                <article class="tutorial-card">
+                    <div class="img-container">
+                        <img src="images/arduino_4.png" alt="Arduino - Advanced Tutorial Image">
+                    </div>
+                    <h3>Arduino - Advanced</h3>
+                    <p>Learn how to use Interrupts and Timers, EEPROM, Communication Protocols.</p>
+                </article>              
                 <!-- More tutorial cards can be added here -->
             </div>
         </section>
+
+        
+        <section id="CAD tutorials">
+            <h2>CAD Tutorials</h2>
+            <div class="tutorial-grid">
+
+                <article class="tutorial-card">
+                    <div class="img-container">
+                        <img src="images/onshape_1.png" alt="Basics of Onshape Tutorial Image">
+                    </div>
+                    <h3>Onshape Basics</h3>
+                    <p>Learn Onshape interface, basic sketching, part design and exporting 3D models.</p>
+                </article>
+
+                <article class="tutorial-card">
+                    <div class="img-container">
+                        <img src="images/onshape_2.png" alt="Mastering Onshape Tutorial Image">
+                    </div>
+                    <h3>Mastering Onshape</h3>
+                    <p>Learn advanced modeling, assemblies, mates and collaborative tools.</p>
+                </article>
+
+                <!-- More tutorial cards can be added here -->
+            </div>
+        </section>
+
+        <a href="#home" class="back-to-top">Back to Top</a>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 Tutorial Website. All rights reserved.</p>
+        <p>&copy; 2024 Breadboard Tutorials. All rights reserved.</p>
     </footer>
 </body>
 </html>
