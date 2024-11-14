@@ -121,8 +121,9 @@ h2 {
 
 /* Back to Top Link */
 .back-to-top {
-    display: inline-block;
-    margin-top: 2rem;
+    position: fixed;
+    bottom: 60px;  /* Adjust this value to position it above the footer */
+    left: 20px;    /* Position it on the left side */
     padding: 0.5rem 1rem;
     background-color: #3498db;
     color: white;
@@ -130,10 +131,39 @@ h2 {
     border-radius: 4px;
     font-weight: bold;
     transition: background-color 0.3s;
+    z-index: 1000;
+    display: none; /* Initially hidden */
 }
 
 .back-to-top:hover {
     background-color: #2980b9;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0rem;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+}
+
+#contact li strong {
+    color: #3498db;
 }
 
 /* Footer */
@@ -160,4 +190,8 @@ footer {
     h2 {
         font-size: 1.5rem;
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
