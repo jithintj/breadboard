@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Add 'id="home"' to the header for the Back to Top functionality -->
     <header id="home">
         <nav>
             <ul>
@@ -108,18 +109,5 @@
     <footer>
         <p>&copy; 2024 Breadboard Tutorials. All rights reserved.</p>
     </footer>
-
-    <script>
-        // JavaScript to show/hide the Back to Top button
-        window.onscroll = function() {
-            var backToTopButton = document.querySelector('.back-to-top');
-            // Check if the user has scrolled down 300px from the top of the document
-            if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-                backToTopButton.style.display = "block"; // Show the button
-            } else {
-                backToTopButton.style.display = "none"; // Hide the button
-            }
-        };
-    </script>
 </body>
 </html>
