@@ -109,5 +109,26 @@
     <footer>
         <p>&copy; 2024 Breadboard Tutorials. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Get the Back to Top button
+        const backToTopButton = document.querySelector('.back-to-top');
+    
+        // Function to toggle the button's visibility
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const halfPageHeight = document.body.scrollHeight / 2;
+    
+            if (scrollPosition > halfPageHeight) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    
+        // Initially hide the button
+        backToTopButton.style.display = 'none';
+        
+    </script>
 </body>
 </html>
