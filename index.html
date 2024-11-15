@@ -111,24 +111,41 @@
     </footer>
 
     <script>
-        // Get the Back to Top button
+        // Get the Back to Top button and footer
         const backToTopButton = document.querySelector('.back-to-top');
-    
-        // Function to toggle the button's visibility
+        const footer = document.querySelector('footer');
+
+        // Set a safe distance from the footer where the Back to Top button should stop
+        const safeDistance = 10; // distance in pixels
+
+        // Function to toggle the button's visibility and position
         window.addEventListener('scroll', () => {
             const scrollPosition = window.scrollY;
-            const halfPageHeight = document.body.scrollHeight / 2;
-    
-            if (scrollPosition > halfPageHeight) {
+            const footerPosition = footer.offsetTop;  // Get the position of the footer
+            const footerHeight = footer.offsetHeight; // Get the height of the footer
+            const windowHeight = window.innerHeight; // Get the height of the viewport
+
+            // Show the button when scrolled down past half of the page height
+            if (scrollPosition > (document.body.scrollHeight / 2)) {
                 backToTopButton.style.display = 'block';
             } else {
                 backToTopButton.style.display = 'none';
             }
+
+            // If the user is near the footer, make the button stop before overlapping the footer
+            if (scrollPosition + windowHeight >= footerPosition) {
+                // Stop the button at a safe distance above the footer
+                backToTopButton.style.position = 'fixed';
+                backToTopButton.style.bottom = `${footerHeight + safeDistance}px`;
+            } else {
+                // Normal button behavior when not near the footer
+                backToTopButton.style.position = 'fixed';
+                backToTopButton.style.bottom = '20px';
+            }
         });
-    
+
         // Initially hide the button
         backToTopButton.style.display = 'none';
-        
     </script>
 </body>
 </html>
