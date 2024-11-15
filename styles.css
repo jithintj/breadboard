@@ -1,3 +1,15 @@
+/* CSS Variables for Consistency */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --button-bg: #007BFF;
+    --button-bg-hover: #0056b3;
+    --text-color: #333;
+    --card-hover-shadow: rgba(0, 0, 0, 0.15);
+    --card-transform: scale(1.02);
+    --card-transition: transform 0.3s, box-shadow 0.3s;
+}
+
 /* Reset default styles */
 * {
     margin: 0;
@@ -8,12 +20,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* Header and Navigation */
 header {
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
     padding: 1rem;
 }
 
@@ -32,13 +44,13 @@ nav a {
 }
 
 nav a:hover {
-    color: #3498db;
+    color: var(--accent-color);
 }
 
 /* Focus styles for accessibility */
-nav a:focus,
-.back-to-top:focus {
-    outline: 3px solid #3498db;
+nav a:focus-visible,
+.back-to-top:focus-visible {
+    outline: 3px solid var(--accent-color);
     outline-offset: 2px;
 }
 
@@ -56,13 +68,13 @@ section {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #2c3e50;
+    color: var(--primary-color);
 }
 
 #about p {
@@ -82,12 +94,12 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: var(--card-transition);
 }
 
 .tutorial-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transform: translateY(-3px);
+    box-shadow: 0 4px 10px var(--card-hover-shadow);
+    transform: var(--card-transform); /* Slightly enlarge the card on hover */
 }
 
 .tutorial-card img {
@@ -122,21 +134,24 @@ h2 {
 
 /* Back to Top Link */
 .back-to-top {
+    display: none; /* Hidden by default */
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 0.5rem 1rem;
-    background-color: #3498db;
+    background-color: var(--button-bg);
     color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    z-index: 1000;
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height equal to width for a circle */
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-top:hover {
-    background-color: #2980b9;
+    background-color: var(--button-bg-hover);
 }
 
 /* Contact Section */
@@ -148,7 +163,7 @@ h2 {
 
 #contact h2 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--primary-color);
     margin-bottom: 0rem;
 }
 
@@ -163,36 +178,18 @@ h2 {
 }
 
 #contact li strong {
-    color: #3498db;
+    color: var(--accent-color);
 }
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
 }
 
-/* Responsive Design */
-/*
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-}
-*/
 html {
     scroll-behavior: smooth;
 }
