@@ -5,7 +5,7 @@
     --button-bg: #007BFF;
     --button-bg-hover: #0056b3;
     --text-color: #333;
-    --card-hover-shadow: rgba(0, 0, 0, 0.2);  /* Made darker for better contrast */
+    --card-hover-shadow: rgba(0, 0, 0, 0.2);
     --card-transform: scale(1.02);
     --card-transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -80,6 +80,10 @@ h2 {
 #about p {
     text-align: justify;
     line-height: 1.8;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
 }
 
 /* Tutorial Grid */
@@ -92,13 +96,13 @@ h2 {
 .tutorial-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     transition: var(--card-transition);
 }
 
 .tutorial-card:hover {
-    box-shadow: 0 6px 15px var(--card-hover-shadow); /* Enhanced hover shadow */
+    box-shadow: 0 6px 15px var(--card-hover-shadow);
     transform: var(--card-transform);
 }
 
@@ -116,6 +120,11 @@ h2 {
 .tutorial-card p {
     padding: 0 1rem 1rem;
     line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
 }
 
 /* Image Container */
@@ -137,7 +146,7 @@ h2 {
     list-style: disc;
     padding: 0 2rem 1rem;
     color: var(--text-color);
-    margin-top: 1.5rem; /* Added spacing after image */
+    margin-top: 1.5rem;
 }
 
 .tutorial-card li {
@@ -197,12 +206,17 @@ h2 {
 .course-overview {
     margin-bottom: 2rem;
     padding: 0 1rem;
+    max-width: 100%;
 }
 
 .course-overview p {
     text-align: justify;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
 }
 
 .course-info {
@@ -216,12 +230,12 @@ h2 {
     background: #fff;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow to match tutorial cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: var(--card-transition);
 }
 
 .info-card:hover {
-    box-shadow: 0 6px 15px var(--card-hover-shadow); /* Enhanced hover shadow */
+    box-shadow: 0 6px 15px var(--card-hover-shadow);
     transform: var(--card-transform);
 }
 
@@ -229,6 +243,16 @@ h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
     padding: 0;
+}
+
+.info-card p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
+    line-height: 1.8;
+    margin-bottom: 1rem;
 }
 
 .info-card ul {
@@ -288,5 +312,23 @@ html {
 
     h2 {
         font-size: 1.75rem;
+    }
+
+    /* Enhanced mobile text formatting */
+    .course-overview p,
+    .info-card p,
+    .tutorial-card p,
+    #about p {
+        text-align: justify;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin: 0 auto 1.5rem;
+        max-width: 100%;
+        word-spacing: -0.05em;
+        text-justify: inter-word;
+    }
+
+    .info-card {
+        margin: 0 1rem;
     }
 }
