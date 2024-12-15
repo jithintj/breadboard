@@ -5,7 +5,7 @@
     --button-bg: #007BFF;
     --button-bg-hover: #0056b3;
     --text-color: #333;
-    --card-hover-shadow: rgba(0, 0, 0, 0.15);
+    --card-hover-shadow: rgba(0, 0, 0, 0.2);  /* Made darker for better contrast */
     --card-transform: scale(1.02);
     --card-transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -82,38 +82,39 @@ h2 {
     line-height: 1.8;
 }
 
-/* Tutorial Grid */
-.tutorial-grid {
+/* Calculator Grid */
+.calculator-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.tutorial-card {
+.calculator-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
     overflow: hidden;
     transition: var(--card-transition);
+    padding: 8px;
 }
 
-.tutorial-card:hover {
-    box-shadow: 0 4px 10px var(--card-hover-shadow);
-    transform: var(--card-transform); /* Slightly enlarge the card on hover */
+.calculator-card:hover {
+    box-shadow: 0 6px 15px var(--card-hover-shadow); /* Enhanced hover shadow */
+    transform: var(--card-transform);
 }
 
-.tutorial-card img {
+.calculator-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.tutorial-card h3 {
+.calculator-card h3 {
     padding: 1rem;
     font-size: 1.2rem;
 }
 
-.tutorial-card p {
+.calculator-card p {
     padding: 0 1rem 1rem;
     line-height: 1.8;
 }
@@ -132,16 +133,28 @@ h2 {
     object-fit: cover;
 }
 
+/* Calculator Card List Styling */
+.calculator-card ul {
+    list-style: disc;
+    padding: 0 2rem 1rem;
+    color: var(--text-color);
+    margin-top: 1.5rem; /* Added spacing after image */
+}
+
+.calculator-card li {
+    margin-bottom: 0.5rem;
+}
+
 /* Back to Top Link */
 .back-to-top {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: var(--button-bg);
     color: white;
-    width: 50px; /* Set the width */
-    height: 50px; /* Set the height equal to width for a circle */
+    width: 50px;
+    height: 50px;
     padding: 10px;
     border-radius: 50%;
     font-size: 20px;
@@ -181,6 +194,68 @@ h2 {
     color: var(--accent-color);
 }
 
+/* Course Section Styles */
+.course-overview {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.course-overview p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.course-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow to match calculator cards */
+    transition: var(--card-transition);
+}
+
+.info-card:hover {
+    box-shadow: 0 6px 15px var(--card-hover-shadow); /* Enhanced hover shadow */
+    transform: var(--card-transform);
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.info-card ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.module-section {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.module-section h2 {
+    color: var(--primary-color);
+    margin: 2rem 0 1.5rem;
+}
+
+.assessment-section {
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.assessment-section .calculator-card {
+    padding: 1rem;
+}
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -192,4 +267,27 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-info {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
 }
